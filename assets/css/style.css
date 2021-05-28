@@ -1,0 +1,78 @@
+/* Color palette sourced from https://www.color-hex.com/color-palette/109907 Blood & Cinder palette */
+:root {
+    --burgandy: #8f0c0c;
+    --grape: #a36697;
+    --pale-grey: #cecadc;
+    --medium-grey: #827c7c;
+    --darkgrey: #2f2e2e;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {}
+
+h1 {
+    font-size: 50px;
+    color: var(--grape);
+    background-color: var(--darkgrey);
+}
+
+h2 {
+    font-size: 15px;
+    color: var(--pale-grey);
+}
+
+h3 {
+    font-size: 25px;
+    color: var(--burgandy);
+}
+
+h4 {
+    font-size: 15px;
+    color: var(--grape);
+    background-color: var(--darkgrey);
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--dark-grey);
+}
+
+nav,
+.navbar {}
+
+ul,
+li,
+.align-right {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: flex-end;
+    justify-content: space-around;
+    padding: 0 100px 5px 0;
+    font-size: 20px;
+    list-style: none;
+}
+
+main {}
+
+hero,
+.hero {}
+
+.container {}
+
+#about {}
+
+#work {}
+
+#bigcard {}
+
+.smallcard {}
+
+#contact {}
+
+.space-around {}
+
+.space-around < li {}
