@@ -2,6 +2,8 @@
 BOOTCAMP - Week 2 assignment
 
 <!-- REWORK THE README FOLLOWING THESE DIRECTIONS -->
+<!-- Mention Wireframe in assets -->
+<!-- Put my resume into assets? -->
 
 ## Description
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
