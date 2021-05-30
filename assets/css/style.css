@@ -1,14 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 /* Color palette sourced from https://www.color-hex.com/color-palette/109907 Blood & Cinder palette */
 :root {
     --burgandy: #8f0c0c;
     --grape: #a36697;
     --pale-grey: #cecadc;
     --medium-grey: #827c7c;
-    --darkgrey: #2f2e2e;
-}
-
-* {
-    box-sizing: border-box;
+    --dark-grey: #2f2e2e;
 }
 
 body {
@@ -20,21 +20,24 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 50px;
-    background-color: var(--darkgrey);
+    padding: 30px 0 20px 0;
+    background-color: var(--dark-grey);
+    width: 100%;
+    position: fixed;
 }
 
 h1 {
     font-family: 'Architects Daughter', cursive;
     font-size: 65px;
     color: var(--grape);
+    padding-left: 25px;
 }
 
 h2 {
     display: flex;
     flex-wrap: wrap;
     width: 470px;
-    margin: 25px 200px auto 25px;
+    margin: 25px 300px auto 25px;
     padding: 15px;
     font-size: 15px;
     line-height: 1.5;
@@ -52,11 +55,6 @@ h3 {
 h4 {
     font-size: 15px;
     color: var(--grape);
-}
-
-p {
-    font-size: 15px;
-    color: var(--darkgrey);
 }
 
 .capabilities {
@@ -84,11 +82,12 @@ p {
     border-left: var(--burgandy) solid 5px;
 }
 
+/* MAKE SURE NAV BAR WORKS PROPERLY */
 .navbar {
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
-.align-right>li {
+.align-right li {
     display: inline;
     text-align: center;
     justify-content: space-around;
@@ -116,7 +115,7 @@ aside {
 .hero {
     height: 650px;
     width: 100%;
-    margin-bottom: 25px;
+    margin: 110px 0 25px 0;
     background-image: url("https://t4.ftcdn.net/jpg/02/13/53/77/240_F_213537787_UuIw2GYMA3GoDNfxYLTCtLVoc406ujIE.jpg");
     background-size: cover;
     background-position: center;
@@ -131,42 +130,68 @@ aside {
 }
 
 #details {
-    padding: 1025px 0 10px 0;
+    padding: 1400px 0 0 0;
 }
 
-#about {}
-
-#work {}
+#work {
+    margin: 20px 0;
+}
 
 #bigcard img {
     border: var(--burgandy) solid 5px;
 }
 
+/* WHEN THE USER CLICKS ON THE CARDS, THEY ARE TAKEN BACK TO THE TOP OF THE PAGE ( TO #top) */
+/* {
+     scroll-behavior: smooth;
+ } */
+
+/* THESE Ps NEED TO STAY BEHIND THE HEADER & NOT BREAK */
+#bigcard p {
+    display: inline;
+    position: relative;
+    bottom: 25px;
+    left: -672px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: var(--grape);
+    color: var(--dark-grey);
+    border: var(--burgandy) solid 2px;
+}
+
+/* NEED TO HAVE SMALLCARDS IN A ROW FIRST */
 .container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 25px 0;
-    padding: 25px 0;
+    align-items: left;
+    justify-content: left;
+    flex-flow: column wrap;
+    align-content: left;
 }
 
 .smallcard img {
     border: var(--burgandy) solid 5px;
 }
 
-#bigcard img:hover,
-.smallcard img:hover {
-    box-shadow: 0 0 50px var(--darkgrey);
+.smallcard p {
+    display: inline;
+    position: relative;
+    bottom: 25px;
+    left: -372px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: var(--grape);
+    color: var(--dark-grey);
+    border: var(--burgandy) solid 2px;
 }
 
-#contact {}
+#bigcard img:hover,
+.smallcard img:hover {
+    box-shadow: 0 0 50px var(--dark-grey);
+}
 
-.space-between {}
-
-.space-between>li {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+.contact>li {
     padding: 20px 0;
     font-size: 15px;
     list-style: none;
@@ -177,5 +202,26 @@ footer {
     display: block;
     text-align: center;
     padding: 20px;
-    background-color: var(--darkgrey);
+    background-color: var(--dark-grey);
+}
+
+/* THIS MEDIA QUERY SECTION IS NOT WORKING */
+/* Small images are split into two columns at 1080px or smaller */
+@media screen and (max-width: 1080px) {
+
+    .smallcard img,
+    .smallcard p {
+        width: 50%;
+        min-height: 264px;
+    }
+}
+
+/* Small images are stacked on top of each other at 600px or smaller */
+@media screen and (max-width: 600px) {
+
+    .smallcard img,
+    .smallcard p {
+        width: 100%;
+        min-height: 264px;
+    }
 }

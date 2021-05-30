@@ -3,7 +3,14 @@ BOOTCAMP - Week 2 assignment
 
 <!-- REWORK THE README FOLLOWING THESE DIRECTIONS -->
 <!-- Mention Wireframe in assets -->
-<!-- Put my resume into assets? -->
+
+## User Story
+
+```
+AS A upcoming web developer
+I WANT to showcase my portfolio of deployed work samples
+SO THAT I can present the best examples of my work so a potential employer can assess whether I am a good candidate for a position they have available
+```
 
 ## Description
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
