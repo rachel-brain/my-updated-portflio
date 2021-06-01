@@ -37,13 +37,15 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     width: 470px;
-    margin: 25px 300px auto 25px;
+    margin: 25px 300px auto 35px;
     padding: 15px;
     font-size: 15px;
     line-height: 1.5;
-    color: var(--burgandy);
+    color: var(--dark-grey);
     background-color: var(--pale-grey);
     text-align: left;
+    border: var(--grape) solid 5px;
+    border-radius: 10px;
 }
 
 h3 {
@@ -57,59 +59,37 @@ h4 {
     color: var(--grape);
 }
 
-.capabilities {
-    display: block;
-    margin-left: 300px;
-    padding-left: 100px;
-    font-size: 15px;
-    line-height: 1.5;
-    color: var(--dark-grey);
-    border-left: var(--burgandy) solid 5px;
-    list-style-type: disc;
-}
-
-.work {
-    display: block;
-    margin-left: 300px;
-    padding-left: 100px;
-    border-left: var(--burgandy) solid 5px;
-}
-
-.contact {
-    display: block;
-    margin-left: 300px;
-    padding-left: 100px;
-    border-left: var(--burgandy) solid 5px;
-}
-
-/* MAKE SURE NAV BAR WORKS PROPERLY */
-.navbar {
-    padding-top: 30px;
-}
-
-.align-right li {
-    display: inline;
-    text-align: center;
-    justify-content: space-around;
-    margin: 10px;
-    padding: 15px;
-    font-size: 15px;
-    list-style-type: none;
-    background-color: var(--pale-grey);
-}
-
 main {
     display: flex;
     flex-wrap: wrap;
     margin-top: 0;
 }
 
-aside {
+.navbar {
+    padding-top: 20px;
+}
+
+.align-right li {
+    display: inline-block;
+    text-align: center;
+    justify-content: space-around;
+    margin: 8px;
+    padding: 15px;
+    font-size: 15px;
+    list-style-type: none;
+    background-color: var(--pale-grey);
+}
+
+.aside {
     margin-left: 25px;
     padding: 20px;
     float: left;
-    width: 300px;
-    height: 100%;
+    flex: 25%;
+    max-width: 15%;
+}
+
+.bulk {
+    width: 85%;
 }
 
 .hero {
@@ -121,16 +101,37 @@ aside {
     background-position: center;
 }
 
+/* FIX REQUIRED TO MAKE THE TEXT WRAP */
+.capabilities {
+    display: block;
+    margin-left: 300px;
+    padding-left: 100px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--dark-grey);
+    border-left: var(--burgandy) solid 5px;
+    list-style-type: disc;
+}
+
+.work,
+.contact {
+    display: block;
+    margin-left: 300px;
+    padding-left: 100px;
+    border-left: var(--burgandy) solid 5px;
+    font-size: 15px;
+}
+
 #text {
-    padding: 7px 0;
+    padding: 4px 0;
 }
 
 #cards {
-    padding: 120px 0;
+    padding: 118px 0;
 }
 
 #details {
-    padding: 1400px 0 0 0;
+    padding: 898px 0 0 0;
 }
 
 #work {
@@ -139,51 +140,52 @@ aside {
 
 #bigcard img {
     border: var(--burgandy) solid 5px;
+    border-radius: 10px;
+    /* width=676px height=448px */
+    /* flex: 1 1 676px; */
 }
 
-/* WHEN THE USER CLICKS ON THE CARDS, THEY ARE TAKEN BACK TO THE TOP OF THE PAGE ( TO #top) */
-/* {
-     scroll-behavior: smooth;
- } */
-
-/* THESE Ps NEED TO STAY BEHIND THE HEADER & NOT BREAK */
+/* FIX REQUIRED TO MAKE THE Ps STAY BEHIND THE HEADER!!! RELATIVE IS WRONG?!! */
 #bigcard p {
-    display: inline;
     position: relative;
-    bottom: 25px;
-    left: -672px;
+    bottom: 40px;
+    left: 4px;
+    width: 450px;
     padding: 8px;
     font-size: 14px;
     font-weight: 400;
     background-color: var(--grape);
     color: var(--dark-grey);
     border: var(--burgandy) solid 2px;
+    border-radius: 5px;
 }
 
-/* NEED TO HAVE SMALLCARDS IN A ROW FIRST */
 .container {
     display: flex;
     align-items: left;
-    justify-content: left;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-content: left;
 }
 
 .smallcard img {
     border: var(--burgandy) solid 5px;
+    border-radius: 10px;
+    margin: 0 10px 0 0;
+    /* flex: 1 1 376px; */
 }
 
 .smallcard p {
-    display: inline;
     position: relative;
-    bottom: 25px;
-    left: -372px;
+    bottom: 40px;
+    left: 4px;
+    width: 350px;
     padding: 8px;
     font-size: 14px;
     font-weight: 400;
     background-color: var(--grape);
     color: var(--dark-grey);
     border: var(--burgandy) solid 2px;
+    border-radius: 5px;
 }
 
 #bigcard img:hover,
@@ -192,7 +194,8 @@ aside {
 }
 
 .contact>li {
-    padding: 20px 0;
+    padding: 10px 0;
+    margin-bottom: 5px;
     font-size: 15px;
     list-style: none;
     color: var(--dark-grey);
@@ -205,23 +208,44 @@ footer {
     background-color: var(--dark-grey);
 }
 
-/* THIS MEDIA QUERY SECTION IS NOT WORKING */
+/* FIX REQUIRED TO MAKE THE MEDIA QUERY SECTION WORK */
+/* FIX REQUIRED TO MAKE THE ASIDE RE-SIZE */
 /* Small images are split into two columns at 1080px or smaller */
-@media screen and (max-width: 1080px) {
+/* @media screen and (max-width: 1080px) {
 
     .smallcard img,
     .smallcard p {
         width: 50%;
         min-height: 264px;
     }
-}
+} */
 
 /* Small images are stacked on top of each other at 600px or smaller */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
 
     .smallcard img,
     .smallcard p {
         width: 100%;
         min-height: 264px;
+    }
+} */
+
+/* FIX REQUIRED TO MAKE THE NAV BAR CHANGE TO COLUMN INSTEAD OF ROW */
+/* @media screen and (max-width: 768px) {
+    .align-right li {
+        flex-direction: column;
+    }
+} */
+
+/* FIX REQUIRED TO MAKE THE IMAGES SHRINK */
+
+@media screen and (min-width: 480px) {
+    .aside {
+        width: 62px;
+        float: left;
+    }
+
+    .bulk {
+        width: auto;
     }
 }
