@@ -1,7 +1,6 @@
 # my-portfolio
 BOOTCAMP - Week 2 assignment
 
-<!-- REWORK THE README FOLLOWING THESE DIRECTIONS -->
 
 ## User Story
 
@@ -18,24 +17,16 @@ My motivation for undertaking this project was to have a portfolio ready to go, 
 Open the index.html page in your prefered browser to see the finished webpage which is responsive so can be viewed on a number of different screen sizes.
 
 ## Usage
-* Click on the images to be directed to the top of the page.  Note that, in this case, the top of the page has been used as a placeholder for when I add further work; in which case, clicking on the images will direct the user to the new work.
+Click on the images to be directed to the top of the page.  Note that, in this case, the top of the page has been used as a placeholder for when I add further work; in which case, clicking on the images will direct the user to the new work.
 
 ## Screenshot
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
+A screenshot of the webpage on a desktop monitor can be seen in the assets at (assets/images/screenshot-of-deployed-website.png).
 
 ## License
-Use the MIT License ...
-
-[https://choosealicense.com/](https://choosealicense.com/)
-
-
+The MIT License has been applied which can be seen in the source file at (LICENSE.txt).
 
 ## Tests
-The main test run was to look at the site in multiple screen sizes, using the toggle device bar in the Dev Tools in the browser.  Unfortunately, at time of publishing, the site was not perfect in all screen sizes & further debugging is required.
+The main test run was to look at the site in multiple screen sizes, using the toggle device bar in the Dev Tools in the browser.  Unfortunately, at the time of publishing, the site was not perfect in all screen sizes & further debugging is required.
 
 ## URLs
 

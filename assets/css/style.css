@@ -24,6 +24,7 @@ header {
     background-color: var(--dark-grey);
     width: 100%;
     position: fixed;
+    z-index: 999;
 }
 
 h1 {
@@ -78,19 +79,25 @@ main {
     font-size: 15px;
     list-style-type: none;
     background-color: var(--pale-grey);
+    border-radius: 5px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: stretch;
 }
 
 .aside {
+    /* flex-direction: column; */
+    /* align-items: stretch; */
     margin-left: 25px;
     padding: 20px;
-    float: left;
-    flex: 25%;
-    max-width: 15%;
+    align-content: center;
 }
 
-.bulk {
-    width: 85%;
-}
+/* .bulk {
+    flex: 1 1 80%;
+} */
 
 .hero {
     height: 650px;
@@ -101,23 +108,23 @@ main {
     background-position: center;
 }
 
-/* FIX REQUIRED TO MAKE THE TEXT WRAP */
 .capabilities {
     display: block;
-    margin-left: 300px;
-    padding-left: 100px;
+    margin-left: 25px;
+    padding-left: 75px;
     font-size: 15px;
     line-height: 1.5;
     color: var(--dark-grey);
     border-left: var(--burgandy) solid 5px;
     list-style-type: disc;
+    flex-wrap: wrap;
 }
 
 .work,
 .contact {
     display: block;
-    margin-left: 300px;
-    padding-left: 100px;
+    margin-left: 25px;
+    padding-left: 75px;
     border-left: var(--burgandy) solid 5px;
     font-size: 15px;
 }
@@ -127,11 +134,11 @@ main {
 }
 
 #cards {
-    padding: 118px 0;
+    padding: 125px 0;
 }
 
 #details {
-    padding: 898px 0 0 0;
+    padding: 960px 0 0 0;
 }
 
 #work {
@@ -141,11 +148,8 @@ main {
 #bigcard img {
     border: var(--burgandy) solid 5px;
     border-radius: 10px;
-    /* width=676px height=448px */
-    /* flex: 1 1 676px; */
 }
 
-/* FIX REQUIRED TO MAKE THE Ps STAY BEHIND THE HEADER!!! RELATIVE IS WRONG?!! */
 #bigcard p {
     position: relative;
     bottom: 40px;
@@ -171,7 +175,6 @@ main {
     border: var(--burgandy) solid 5px;
     border-radius: 10px;
     margin: 0 10px 0 0;
-    /* flex: 1 1 376px; */
 }
 
 .smallcard p {
@@ -193,7 +196,7 @@ main {
     box-shadow: 0 0 50px var(--dark-grey);
 }
 
-.contact>li {
+.contact li {
     padding: 10px 0;
     margin-bottom: 5px;
     font-size: 15px;
@@ -208,44 +211,106 @@ footer {
     background-color: var(--dark-grey);
 }
 
-/* FIX REQUIRED TO MAKE THE MEDIA QUERY SECTION WORK */
+
 /* FIX REQUIRED TO MAKE THE ASIDE RE-SIZE */
-/* Small images are split into two columns at 1080px or smaller */
-/* @media screen and (max-width: 1080px) {
+/* FIX REQUIRED TO MAKE THE TEXT IN CAPABILITIES WRAP */
+/* FIX REQUIRED TO MAKE THE IMAGES - & EVERYTHING - SHRINK */
 
-    .smallcard img,
+/* Tablets - everything shrinks */
+@media screen and (max-width: 992px) {
+    h3 {
+        font-size: 30px;
+    }
+
+    .capabilities,
+    .contact li {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    #bigcard img {
+        border: var(--burgandy) solid 4px;
+        border-radius: 7px;
+        width: 541px;
+        height: 358px;
+    }
+
+    .smallcard img {
+        border: var(--burgandy) solid 4px;
+        border-radius: 7px;
+        width: 301px;
+        height: 211px;
+    }
+
+    #bigcard p,
     .smallcard p {
-        width: 50%;
-        min-height: 264px;
+        font-size: 11px;
+        width: 291px;
     }
-} */
+}
 
-/* Small images are stacked on top of each other at 600px or smaller */
-/* @media screen and (max-width: 600px) {
+/* Large smartphones - everything shrinks some more */
+@media screen and (max-width: 768px) {
+    h3 {
+        font-size: 25px;
+    }
 
-    .smallcard img,
+    .capabilities,
+    .contact li {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    #bigcard img {
+        border: var(--burgandy) solid 3px;
+        border-radius: 5px;
+        width: 406px;
+        height: 269px;
+    }
+
+    .smallcard img {
+        border: var(--burgandy) solid 3px;
+        border-radius: 5px;
+        width: 226px;
+        height: 158px;
+    }
+
+    #bigcard p,
     .smallcard p {
-        width: 100%;
-        min-height: 264px;
+        font-size: 9px;
+        width: 216px;
     }
-} */
+}
 
-/* FIX REQUIRED TO MAKE THE NAV BAR CHANGE TO COLUMN INSTEAD OF ROW */
-/* @media screen and (max-width: 768px) {
-    .align-right li {
-        flex-direction: column;
-    }
-} */
-
-/* FIX REQUIRED TO MAKE THE IMAGES SHRINK */
-
-@media screen and (min-width: 480px) {
-    .aside {
-        width: 62px;
-        float: left;
+/* Small smartphones - everything shrinks even more */
+@media screen and (max-width: 576px) {
+    h3 {
+        font-size: 20px;
     }
 
-    .bulk {
-        width: auto;
+    .capabilities,
+    .contact li {
+        font-size: 7px;
+        line-height: 1.0;
+    }
+
+    #bigcard img {
+        border: var(--burgandy) solid 1px;
+        border-radius: 3px;
+        width: 270px;
+        height: 179px;
+    }
+
+    .smallcard img {
+        border: var(--burgandy) solid 1px;
+        border-radius: 3px;
+        width: 150px;
+        height: 106px;
+    }
+
+    #bigcard p,
+    .smallcard p {
+        font-size: 6px;
+        width: 140px;
     }
 }
