@@ -51,7 +51,7 @@ h2 {
 
 h3 {
     font-family: 'Architects Daughter', cursive;
-    font-size: 35px;
+    font-size: 30px;
     color: var(--burgandy);
 }
 
@@ -84,24 +84,24 @@ main {
 
 .flex-container {
     display: flex;
-    align-items: stretch;
+    height: auto;
 }
 
 .aside {
-    /* flex-direction: column; */
-    /* align-items: stretch; */
+    flex-shrink: 2;
     margin-left: 25px;
     padding: 20px;
     align-content: center;
+    min-width: 110px;
 }
 
-/* .bulk {
-    flex: 1 1 80%;
-} */
+.bulk {
+    flex-shrink: 1;
+}
 
 .hero {
     height: 650px;
-    width: 100%;
+    width: 100vw;
     margin: 110px 0 25px 0;
     background-image: url("https://t4.ftcdn.net/jpg/02/13/53/77/240_F_213537787_UuIw2GYMA3GoDNfxYLTCtLVoc406ujIE.jpg");
     background-size: cover;
@@ -134,11 +134,11 @@ main {
 }
 
 #cards {
-    padding: 125px 0;
+    padding: 135px 0;
 }
 
 #details {
-    padding: 960px 0 0 0;
+    padding: 665px 0 0 0;
 }
 
 #work {
@@ -209,17 +209,21 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: var(--dark-grey);
+    width: 100vw;
 }
 
-
-/* FIX REQUIRED TO MAKE THE ASIDE RE-SIZE */
-/* FIX REQUIRED TO MAKE THE TEXT IN CAPABILITIES WRAP */
-/* FIX REQUIRED TO MAKE THE IMAGES - & EVERYTHING - SHRINK */
-
-/* Tablets - everything shrinks */
+/* Tablets - everything in main shrinks */
 @media screen and (max-width: 992px) {
+    #cards {
+        padding: 100px 0;
+    }
+
+    #details {
+        padding: 775px 0 0 0;
+    }
+
     h3 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .capabilities,
@@ -242,17 +246,25 @@ footer {
         height: 211px;
     }
 
-    #bigcard p,
+    #bigcard p {
+        font-size: 11px;
+        width: 360px;
+    }
+
     .smallcard p {
         font-size: 11px;
         width: 291px;
     }
 }
 
-/* Large smartphones - everything shrinks some more */
+/* Large smartphones - everything in main shrinks some more */
 @media screen and (max-width: 768px) {
+    #details {
+        padding: 580px 0 0 0;
+    }
+
     h3 {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .capabilities,
@@ -275,17 +287,25 @@ footer {
         height: 158px;
     }
 
-    #bigcard p,
+    #bigcard p {
+        font-size: 9px;
+        width: 300px;
+    }
+
     .smallcard p {
         font-size: 9px;
-        width: 216px;
+        width: 222px;
     }
 }
 
-/* Small smartphones - everything shrinks even more */
+/* Small smartphones - everything in main shrinks even more */
 @media screen and (max-width: 576px) {
+    #details {
+        padding: 680px 0 0 0;
+    }
+
     h3 {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .capabilities,
