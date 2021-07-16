@@ -1,0 +1,339 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Color palette sourced from https://www.color-hex.com/color-palette/109907 Blood & Cinder palette */
+:root {
+    --burgandy: #8f0c0c;
+    --grape: #a36697;
+    --pale-grey: #cecadc;
+    --medium-grey: #827c7c;
+    --dark-grey: #2f2e2e;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--pale-grey);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 20px 0;
+    background-color: var(--dark-grey);
+    /* width: 100vw; */
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+/* REWORK THIS CODE IN MOBILE FIRST METHOD */
+/* CHANGE ASIDE TO HEADING ABOVE THE TEXT  */
+
+h1 {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 65px;
+    color: var(--grape);
+    padding-left: 25px;
+}
+
+h2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 470px;
+    margin: 25px 300px auto 35px;
+    padding: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--dark-grey);
+    background-color: var(--pale-grey);
+    text-align: left;
+    border: var(--grape) solid 5px;
+    border-radius: 10px;
+}
+
+h3 {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 30px;
+    color: var(--burgandy);
+}
+
+h4 {
+    font-size: 15px;
+    color: var(--grape);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin-top: 0;
+}
+
+.navbar {
+    padding-top: 20px;
+}
+
+.align-right li {
+    display: inline-block;
+    text-align: center;
+    justify-content: space-around;
+    margin: 8px;
+    padding: 15px;
+    font-size: 15px;
+    list-style-type: none;
+    background-color: var(--pale-grey);
+    border-radius: 5px;
+}
+
+.flex-container {
+    display: flex;
+    height: auto;
+}
+
+.bulk {
+    flex-shrink: 1;
+}
+
+.hero {
+    height: 650px;
+    width: 100vw;
+    /* width: 100%; */
+    margin: 110px 0 25px 0;
+    background-image: url("https://t4.ftcdn.net/jpg/02/13/53/77/240_F_213537787_UuIw2GYMA3GoDNfxYLTCtLVoc406ujIE.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.capabilities {
+    display: block;
+    margin-left: 25px;
+    padding-left: 75px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--dark-grey);
+    border-left: var(--burgandy) solid 5px;
+    list-style-type: disc;
+    flex-wrap: wrap;
+}
+
+.work,
+.contact {
+    display: block;
+    margin-left: 25px;
+    padding-left: 75px;
+    border-left: var(--burgandy) solid 5px;
+    font-size: 15px;
+}
+
+#text {
+    padding: 4px 0;
+}
+
+#cards {
+    padding: 135px 0;
+}
+
+#details {
+    padding: 665px 0 0 0;
+}
+
+#work {
+    margin: 20px 0;
+}
+
+#bigcard img {
+    border: var(--burgandy) solid 5px;
+    border-radius: 10px;
+}
+
+#bigcard p {
+    position: relative;
+    bottom: 40px;
+    left: 4px;
+    width: 450px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: var(--grape);
+    color: var(--dark-grey);
+    border: var(--burgandy) solid 2px;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    align-items: left;
+    flex-flow: row wrap;
+    align-content: left;
+}
+
+.smallcard img {
+    border: var(--burgandy) solid 5px;
+    border-radius: 10px;
+    margin: 0 10px 0 0;
+}
+
+.smallcard p {
+    position: relative;
+    bottom: 40px;
+    left: 4px;
+    width: 350px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: var(--grape);
+    color: var(--dark-grey);
+    border: var(--burgandy) solid 2px;
+    border-radius: 5px;
+}
+
+#bigcard img:hover,
+.smallcard img:hover {
+    box-shadow: 0 0 50px var(--dark-grey);
+}
+
+.contact li {
+    padding: 10px 0;
+    margin-bottom: 5px;
+    font-size: 15px;
+    list-style: none;
+    color: var(--dark-grey);
+}
+
+footer {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--dark-grey);
+    width: 100vw;
+}
+
+/* Tablets - everything in main shrinks */
+/* @media screen and (max-width: 992px) {
+    aside {
+        /* change class name */
+/* display: none;
+    }
+
+    #cards {
+        padding: 100px 0;
+    }
+
+    #details {
+        padding: 775px 0 0 0;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .capabilities,
+    .contact li {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    #bigcard img {
+        border: var(--burgandy) solid 4px;
+        border-radius: 7px;
+        width: 90%;
+        height: auto;
+    }
+
+    .smallcard img {
+        border: var(--burgandy) solid 4px;
+        border-radius: 7px;
+        width: 45%;
+        height: auto;
+    }
+
+    #bigcard p {
+        font-size: 11px;
+        width: 360px;
+    }
+
+    .smallcard p {
+        font-size: 11px;
+        width: 291px;
+    }
+} */
+
+/* Large smartphones - everything in main shrinks some more */
+/* @media screen and (max-width: 768px) {
+    #details {
+        padding: 580px 0 0 0;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .capabilities,
+    .contact li {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    #bigcard img {
+        border: var(--burgandy) solid 3px;
+        border-radius: 5px;
+        width: 90%;
+        height: auto;
+    }
+
+    .smallcard img {
+        border: var(--burgandy) solid 3px;
+        border-radius: 5px;
+        width: 45%;
+        height: auto;
+    }
+
+    #bigcard p {
+        font-size: 9px;
+        width: 300px;
+    }
+
+    .smallcard p {
+        font-size: 9px;
+        width: 222px;
+    }
+}  */
+
+/* Small smartphones - everything in main shrinks even more */
+/* @media screen and (max-width: 576px) {
+    #details {
+        padding: 680px 0 0 0;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    .capabilities,
+    .contact li {
+        font-size: 7px;
+        line-height: 1.0;
+    }
+
+    #bigcard img {
+        border: var(--burgandy) solid 1px;
+        border-radius: 3px;
+        width: 270px;
+        height: 179px;
+    }
+
+    .smallcard img {
+        border: var(--burgandy) solid 1px;
+        border-radius: 3px;
+        width: 150px;
+        height: 106px;
+    }
+
+    #bigcard p,
+    .smallcard p {
+        font-size: 6px;
+        width: 140px;
+    }
+} */
