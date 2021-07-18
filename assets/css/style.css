@@ -13,18 +13,18 @@
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 100vw;
     margin: 0;
     background-color: var(--pale-grey);
 }
 
 header {
-    display: inline-block;
+    display: flex;
     justify-content: space-between;
+    padding: 30px 0 20px 0;
     background-color: var(--dark-grey);
-    width: 100vw;
-    /* position: fixed; */
-    /* z-index: 1030; */
+    width: 100%;
+    position: fixed;
+    z-index: 999;
 }
 
 h1 {
@@ -37,8 +37,8 @@ h1 {
 h2 {
     display: flex;
     flex-wrap: wrap;
-    width: 40%;
-    margin-left: 30px;
+    width: 470px;
+    margin: 25px 300px auto 35px;
     padding: 15px;
     font-size: 15px;
     line-height: 1.5;
@@ -60,9 +60,14 @@ h4 {
     color: var(--grape);
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
 .navbar {
-    padding: 20px;
-    float: right;
+    padding-top: 20px;
 }
 
 .align-right li {
@@ -77,26 +82,72 @@ h4 {
     border-radius: 5px;
 }
 
-#hero {
+.flex-container {
+    display: flex;
+    height: auto;
+}
+
+.aside {
+    flex-shrink: 2;
+    margin-left: 25px;
+    padding: 20px;
+    align-content: center;
+    min-width: 110px;
+}
+
+.bulk {
+    flex-shrink: 1;
+}
+
+.hero {
     height: 650px;
     width: 100vw;
+    margin: 110px 0 25px 0;
     background-image: url("https://t4.ftcdn.net/jpg/02/13/53/77/240_F_213537787_UuIw2GYMA3GoDNfxYLTCtLVoc406ujIE.jpg");
     background-size: cover;
     background-position: center;
 }
 
-.capabilities li {
-    list-style: disc;
+.capabilities {
+    display: block;
+    margin-left: 25px;
+    padding-left: 75px;
     font-size: 15px;
     line-height: 1.5;
     color: var(--dark-grey);
+    border-left: var(--burgandy) solid 5px;
+    list-style-type: disc;
+    flex-wrap: wrap;
+}
+
+.work,
+.contact {
+    display: block;
     margin-left: 25px;
+    padding-left: 75px;
+    border-left: var(--burgandy) solid 5px;
+    font-size: 15px;
+}
+
+#text {
+    padding: 4px 0;
+}
+
+#cards {
+    padding: 135px 0;
+}
+
+#details {
+    padding: 665px 0 0 0;
+}
+
+#work {
+    margin: 20px 0;
 }
 
 #bigcard img {
     border: var(--burgandy) solid 5px;
     border-radius: 10px;
-    /* margin-top: 5px; */
 }
 
 #bigcard p {
@@ -104,7 +155,7 @@ h4 {
     bottom: 40px;
     left: 4px;
     width: 450px;
-    padding: 10px;
+    padding: 8px;
     font-size: 14px;
     font-weight: 400;
     background-color: var(--grape);
@@ -115,10 +166,9 @@ h4 {
 
 .container {
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-flow: row wrap;
     align-content: left;
-    margin: 0 0 0 25px;
 }
 
 .smallcard img {
@@ -131,7 +181,7 @@ h4 {
     position: relative;
     bottom: 40px;
     left: 4px;
-    width: 353px;
+    width: 350px;
     padding: 8px;
     font-size: 14px;
     font-weight: 400;
@@ -147,18 +197,140 @@ h4 {
 }
 
 .contact li {
-    text-align: left;
-    list-style: none;
-    margin-left: 25px;
-    padding-top: 5px;
+    padding: 10px 0;
+    margin-bottom: 5px;
     font-size: 15px;
+    list-style: none;
     color: var(--dark-grey);
 }
 
 footer {
-    display: inline-block;
+    display: block;
     text-align: center;
     padding: 20px;
     background-color: var(--dark-grey);
     width: 100vw;
+}
+
+/* Tablets - everything in main shrinks */
+@media screen and (max-width: 992px) {
+    #cards {
+        padding: 100px 0;
+    }
+
+    #details {
+        padding: 775px 0 0 0;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .capabilities,
+    .contact li {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    #bigcard img {
+        border: var(--burgandy) solid 4px;
+        border-radius: 7px;
+        width: 541px;
+        height: 358px;
+    }
+
+    .smallcard img {
+        border: var(--burgandy) solid 4px;
+        border-radius: 7px;
+        width: 301px;
+        height: 211px;
+    }
+
+    #bigcard p {
+        font-size: 11px;
+        width: 360px;
+    }
+
+    .smallcard p {
+        font-size: 11px;
+        width: 291px;
+    }
+}
+
+/* Large smartphones - everything in main shrinks some more */
+@media screen and (max-width: 768px) {
+    #details {
+        padding: 580px 0 0 0;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .capabilities,
+    .contact li {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    #bigcard img {
+        border: var(--burgandy) solid 3px;
+        border-radius: 5px;
+        width: 406px;
+        height: 269px;
+    }
+
+    .smallcard img {
+        border: var(--burgandy) solid 3px;
+        border-radius: 5px;
+        width: 226px;
+        height: 158px;
+    }
+
+    #bigcard p {
+        font-size: 9px;
+        width: 300px;
+    }
+
+    .smallcard p {
+        font-size: 9px;
+        width: 222px;
+    }
+}
+
+/* Small smartphones - everything in main shrinks even more */
+@media screen and (max-width: 576px) {
+    #details {
+        padding: 680px 0 0 0;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    .capabilities,
+    .contact li {
+        font-size: 7px;
+        line-height: 1.0;
+    }
+
+    #bigcard img {
+        border: var(--burgandy) solid 1px;
+        border-radius: 3px;
+        width: 270px;
+        height: 179px;
+    }
+
+    .smallcard img {
+        border: var(--burgandy) solid 1px;
+        border-radius: 3px;
+        width: 150px;
+        height: 106px;
+    }
+
+    #bigcard p,
+    .smallcard p {
+        font-size: 6px;
+        width: 140px;
+    }
 }
