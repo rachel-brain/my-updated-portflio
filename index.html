@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rachel's portfolio</title>
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -17,77 +19,83 @@
         <h1>Rachel Brain</h1>
         <nav class="navbar">
             <ul class="align-right">
-                <li><a href="#top">About Me</a></li>
-                <li><a href="#text">My Work</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#text">About Me</a></li>
+                <li><a href="#cards">My Work</a></li>
+                <li><a href="#details">Contact Me</a></li>
                 <li><a href="assets/rachel_brain-2021.07.15.pdf">My Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="hero">
-            <h2><a id="top"></a>An FMCG professional with 25 years experience across Product Development, Account
-                Management, Marketing & now Web Development & Design!</h2>
+        <div class="container-fluid">
+            <div id="hero">
+                <h2><a id="top"></a>An FMCG professional with 25 years experience across Product Development, Account
+                    Management, Marketing & now with Web Development & Design skills!</h2>
+            </div>
         </div>
+        <br>
 
-        <section class="flex-container">
-            <div class="bulk">
-                <h3 id="text">About Me</h3>
-                <div id="capabilities">
-                    <ul class="capabilities">
-                        <li>A successful Business Manager, I aim to achieve win : win solutions for both employer &
-                            customer
-                            by building lasting partnerships.</li>
-                        <li>I am equally comfortable working on creative solutions & on numerical trackers & data
-                            analysis.
-                        </li>
-                        <li>I thrive on variety & challenge, used to juggling many customers & projects simultaneously.
-                        </li>
-                        <li>I have diverse skills & experience in both business development & product development.</li>
-                        <li>My passion is making everyday products more sustainable for the planet & healthier for the
-                            consumer.</li>
-                        <li>I would love to add a Community Engagement aspect into my role as “giving back” is important
-                            to
-                            me.</li>
-                    </ul>
-                </div>
-                <br>
-                <div id="work">
-                    <h3 id="cards">My Work</h3>
-                    <div class="work">
-                        <card id="bigcard">
-                            <a href="#top"><img src="assets/images/javascript.jpg" width=676px height=448px
-                                    alt="photo of colored javascript code"></a>
-                            <p>Javascript - The world's most popular programming language</p>
+        <div class="container-fluid">
+            <div class="row-1">
+                <h3 id="text" class="col-3">About Me</h3>
+                <div id="capabilities" class="col-9"></div>
+                <ul class="capabilities">
+                    <li>New to Web-development & Web-design, I now have the full complement of Sales & Marketing
+                        skills!</li>
+                    <li>A successful Business manager, I aim to achieve win : win solutions for both employer &
+                        customer by building lasting partnerships based on fantastic service & quality locally-made
+                        product.</li>
+                    <li>I am equally comfortable working on creative solutions & on numerical trackers & data
+                        analysis.
+                    </li>
+                    <li>I thrive on variety & challenge, used to juggling many customers & projects simultaneously.
+                    </li>
+                    <li>I have diverse skills & experience in both business development & product development.</li>
+                    <li>My passion is making everyday products more sustainable for the planet & healthier for the
+                        consumer.</li>
+                    <li>A Community Engagement aspect in my role is vital as “giving back” is important to me.</li>
+                </ul>
+            </div>
+            <br>
+
+            <div class="row-2">
+                <h3 id="cards" class="col-3">My Work</h3>
+                <div id="work" class="col-9"></div>
+                <div class="work">
+                    <card id="bigcard">
+                        <a href="#top"><img src="assets/images/javascript.jpg" width=676px height=448px
+                                alt="photo of colored javascript code"></a>
+                        <p>Javascript - The world's most popular programming language</p>
+                    </card>
+                    <div class="container">
+                        <card class="smallcard">
+                            <a href="#top"><img src="assets/images/html.jpg" width=360px height=252px
+                                    alt="photo of a laptop with html on screen"></a>
+                            <p>HTML - Standard markup language for the Web</p>
                         </card>
-                        <div class="container">
-                            <card class="smallcard">
-                                <a href="#top"><img src="assets/images/html.jpg" width=376px height=264px
-                                        alt="photo of a laptop with html on screen"></a>
-                                <p>HTML - Standard markup language for the Web</p>
-                            </card>
-                            <card class="smallcard">
-                                <a href="#top"><img src="assets/images/css.jpg" width=376px height=264px
-                                        alt="graphic of stylised webpage in pastel colors"></a>
-                                <p>CSS - All about stylin'</p>
-                            </card>
-                            <card class="smallcard">
-                                <a href="#top"><img src="assets/images/bootstrap-icons.png" width=376px height=264px
-                                        alt="graphic of bootstrap icons with purple bootstrap log in foreground"></a>
-                                <p>Bootstrap - Some shortcuts here!</p>
-                            </card>
-                            <card class="smallcard">
-                                <a href="#top"><img src="assets/images/online-forms.jpg" width=376px height=264px
-                                        alt="photo of a person viewing a simple online form on a smart phone"></a>
-                                <p>Forms - So good, visitors can't wait to join up</p>
-                            </card>
-                        </div>
+                        <card class="smallcard">
+                            <a href="#top"><img src="assets/images/css.jpg" width=360px height=252px
+                                    alt="graphic of stylised webpage in pastel colors"></a>
+                            <p>CSS - All about stylin'</p>
+                        </card>
+                        <card class="smallcard">
+                            <a href="#top"><img src="assets/images/bootstrap-icons.png" width=360px height=252px
+                                    alt="graphic of bootstrap icons with purple bootstrap log in foreground"></a>
+                            <p>Bootstrap - Some shortcuts here!</p>
+                        </card>
+                        <card class="smallcard">
+                            <a href="#top"><img src="assets/images/online-forms.jpg" width=360px height=252px
+                                    alt="photo of a person viewing a simple online form on a smart phone"></a>
+                            <p>Forms - So good, visitors can't wait to join up</p>
+                        </card>
                     </div>
                 </div>
                 <br>
-                <div id="contact">
-                    <h3 id="details">Contact Me</h3>
+
+                <div class="row-3">
+                    <h3 id="details" class="col-3">Contact Me</h3>
+                    <div class="col-9"></div>
                     <ul class="contact">
                         <li><strong>Mobile:</strong><a> +61 432 297 755</a></li>
                         <li><strong>E-mail: </strong><a
@@ -97,12 +105,11 @@
                     </ul>
                 </div>
             </div>
-        </section>
-    </main>
+            <br>
 
-    <footer>
-        <h4>More exciting work coming soon ...</h4>
-    </footer>
+            <footer>
+                <h4>More exciting work coming soon ...</h4>
+            </footer>
 </body>
 
 </html>
