@@ -59,5 +59,5 @@ The MIT License has been applied which can be seen in the source file at (LICENS
 The main test run was to look at the site in multiple screen sizes, using the toggle device bar in the Dev Tools in the browser.  Despite using Bootstrap v5.0 this time, at the time of publishing, the site was still not perfect in all screen sizes & further debugging is required.  In particular, the navbar was not always visible and the images were not always showing in full.
 
 ## URLs
-* The URL of the deployed application:  https://rachel-brain.github.io/my-updated-portfolio/
-* The URL of the GitHub repository:     https://github.com/rachel-brain/my-updated-portfolio
+* The URL of the deployed application:  https://rachel-brain.github.io/my-new-improved-portfolio/
+* The URL of the GitHub repository:     https://github.com/rachel-brain/my-new-improved-portfolio
